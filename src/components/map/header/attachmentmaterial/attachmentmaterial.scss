@@ -1,0 +1,127 @@
+$el-bg-blue: #142a52;
+$el-font-blue: #09d5f6;
+$main-color: #2d559f;
+
+.tool-bar {
+    z-index: 99;
+    position: absolute;
+    top: 10px;
+    left: 360px;
+    display: flex;
+    flex-direction: column;
+
+    :deep(.el-overlay-dialog) {
+        position: absolute !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        overflow: visible !important;
+
+        .el-dialog__header {
+            margin-right: 0;
+            padding: 7px 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: $main-color;
+            color: #fff;
+
+            .el-dialog__close {
+                color: #fff;
+            }
+
+            .el-dialog__headerbtn {
+                width: auto;
+                height: auto;
+                position: unset;
+                display: flex;
+            }
+
+            .tool-title {
+                display: flex;
+                align-items: center;
+                letter-spacing: 1px;
+            }
+
+            .title-txt {
+                margin-right: 3px;
+                font-size: 14px;
+            }
+
+            .menu-switch {
+                --el-switch-on-color: #13ce66;
+                --el-switch-off-color: #ff4949;
+                height: auto;
+            }
+        }
+
+        .el-dialog__body {
+            padding: 16px 15px;
+        }
+    }
+
+    :deep(> div:nth-of-type(n + 1)) {
+        position: unset !important;
+    }
+}
+
+.tool-transform {
+    left: 30px !important;
+}
+
+:deep(.tool-dialog) {
+    width: 400px;
+    padding: 0 !important;
+    border-radius: 4px;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 7px 0px rgba(76, 138, 207, 0.48);
+    overflow: hidden;
+    .tool-main {
+        .upload-demo{
+            margin-bottom:20px;
+        }
+        .layer-tree{
+            overflow-y: auto;
+            max-height:150px;
+            background:none;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .el-tree-node__content{
+                padding-left: 0!important;
+                .custom-tree-node{
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .tree-text{
+                        font-size:14px;
+                        color:rgba(51, 51, 51, 1);
+                        i{
+                            font-size:16px;
+                            color:rgba(74, 139, 254, 1);
+                            margin-right:8px;
+                        }
+                    }
+                    .tree-tools{
+                        display:flex;
+                        flex-direction:row;
+                        align-items: center;
+                        padding-right:20px;
+                        span{
+                            color: rgba(102, 102, 102, 1);
+                            font-size: 14px;
+                            &.blue{
+                                color:rgba(45, 85, 159, 1);
+                            }
+                            &:first-child{
+                                margin-right:15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+$el-bg-blue: #142a52;
+$el-font-blue: #09d5f6;
+$main-color: #2d559f;
+
+.tool-bar {
+  z-index: 99;
+  position: absolute;
+  top: 90px;
+  left: 360px;
+  display: flex;
+  flex-direction: column;
+
+  :deep(.el-overlay-dialog) {
+    position: absolute !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    overflow: visible !important;
+
+    .el-dialog__header {
+      margin-right: 0;
+      padding: 7px 10px;
+      display: flex;
+      justify-content: space-between;
+      background-color: $main-color;
+      color: #fff;
+
+      .el-dialog__close {
+        color: #fff;
+      }
+
+      .el-dialog__headerbtn {
+        width: auto;
+        height: auto;
+        position: unset;
+        display: flex;
+      }
+
+      .tool-title {
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+      }
+
+      .title-txt {
+        margin-right: 3px;
+        font-size: 14px;
+      }
+
+      .menu-switch {
+        --el-switch-on-color: #13ce66;
+        --el-switch-off-color: #ff4949;
+        height: auto;
+      }
+    }
+
+    .el-dialog__body {
+      padding: 16px 15px;
+    }
+
+    .el-dialog__footer {
+      text-align: center;
+    }
+  }
+
+  :deep(> div:nth-of-type(n + 1)) {
+    position: unset !important;
+  }
+}
+
+.tool-transform {
+  left: 30px !important;
+}
+
+:deep(.tool-dialog) {
+  width: 700px;
+  padding: 0 !important;
+  border-radius: 4px;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 7px 0px rgba(76, 138, 207, 0.48);
+  overflow: hidden;
+
+  .tool-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .editorText {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      .asterisk-left {
+        margin: 0;
+      }
+
+      .el-form-item__content {
+        display: block;
+        height: 100%;
+
+        &>div {
+          border: 1px solid rgba(191, 197, 207, 1);
+          border-bottom-color: rgba(191, 197, 207, .3) !important;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+        }
+
+        .w-e-toolbar {
+          .w-e-bar-item {
+            padding: 0;
+          }
+        }
+
+        .editor-box {
+          height: 228px !important;
+          border-bottom-color: rgba(191, 197, 207, 1) !important;
+          border-top: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+
+          .w-e-scroll::-webkit-scrollbar {
+            display: none;
+
+          }
+
+          .w-e-text-container {
+            .w-e-scroll {
+              p {
+                margin: 8px 0;
+              }
+            }
+
+            .w-e-text-placeholder {
+              top: 3px;
+            }
+
+            .w-e-modal {
+              right: auto !important;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .el-dialog__footer {
+    padding-top: 0px;
+  }
+
+
+}

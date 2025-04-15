@@ -1,0 +1,11 @@
+.bottom-bar {
+    position: absolute;
+    left: calc(300px + 50vw);
+    bottom: 30px;
+    transform: translateX(calc(-50% - 150px));
+}
+
+.bottom-transform {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}

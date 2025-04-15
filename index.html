@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="lib/Cesium/Widgets/widgets.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+        <title>福清市城市实验室--项目自检子平台</title>
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+        <script src="/config.js"></script>
+        <%- injectScript %>
+        <script>
+            window.apiURL = apiURL;
+            window.apiResource = apiResource;
+            window.cesiumToken = cesiumToken;
+            window.kkfileVersion = kkfileVersion;
+            window.previewURL = previewURL;
+            window.geometryServer = geometryServer;
+            window.mapTypes = mapTypes;
+            window.layerData = layerData;
+            window.visualAngle = visualAngle;
+            window.redLineBufferRadius = redLineBufferRadius;
+            window.platformname = platformname;
+            window.projectname = "";
+            window.unit = "";
+            window.modelLayer = null;
+            window.isPlatform = isPlatform;
+            window.fqMapData = fqMapData;
+            window.initViewData = initViewData;
+            window.redlineEntity = null;
+            window.addLayers = [];
+        </script>
+    </body>
+</html>

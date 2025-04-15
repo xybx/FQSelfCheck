@@ -1,0 +1,92 @@
+$main-color: #2d559f;
+.check-box {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border-radius: 50%;
+    z-index: 99;
+    background-color: $main-color;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    // transition: 0.3s;
+    cursor: pointer;
+    .icon-chengshidizhi {
+        font-size: 24px;
+    }
+    span {
+        font-size: 14px;
+    }
+    :deep(> span) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &:hover {
+        color: #fff;
+        background-color: #96aacf;
+    }
+}
+.step-box {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    .el-button {
+        border: 2px solid #fff;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    }
+    .step-item {
+        margin-bottom: 15px;
+    }
+    .el-button + .el-button {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+.tool-item {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 4px;
+    .label {
+        width: auto;
+        cursor: default;
+    }
+    .icon-jingweidushiqu,
+    .icon-yaping {
+        margin-left: 5px;
+        padding: 8px;
+        transition: 0.3s;
+        color: $main-color;
+        border-radius: 4px;
+        cursor: pointer;
+        box-sizing: border-box;
+        &:hover {
+            background-color: #2d559f;
+            color: #fff;
+        }
+    }
+    .focus-icon {
+        background-color: #2d559f;
+        color: #fff;
+    }
+    .el-input-number,
+    .el-switch {
+        flex: 1;
+    }
+}

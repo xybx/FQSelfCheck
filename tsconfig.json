@@ -1,0 +1,35 @@
+{
+    // "extends": "@vue/tsconfig/tsconfig.web.json",
+    "include": [
+        "env.d.ts",
+        "src/**/*",
+        "src/**/*.vue",
+        "src/**/*.js",
+        "custom-types.d.ts",
+        "src/**/*.d.ts"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        },
+        "types": [
+            "element-plus/global"
+        ],
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "allowJs": true,
+        "ignoreDeprecations": "5.0",
+        "outDir": "build",
+        "esModuleInterop": true,
+    },
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}
